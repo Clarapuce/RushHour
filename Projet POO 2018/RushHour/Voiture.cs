@@ -24,14 +24,16 @@ namespace RushHour
         // variable static donnant le nombre de voitures déjà crées afin de renseigner l'id de la voiture.
         static private int _nbVoitures = 0;
 
+
         //private static ConsoleColor[] _couleurs = { ConsoleColor.DarkBlue, ConsoleColor.DarkGreen, ConsoleColor.Yellow, ConsoleColor.Magenta, ConsoleColor.Red, ConsoleColor.Cyan, ConsoleColor.Green, ConsoleColor.Blue, ConsoleColor.DarkYellow, ConsoleColor.DarkMagenta };
         public Voiture(int taille, int x, int y)
         {
+            _nbVoitures += 1;
+            Id = _nbVoitures;
             Taille = taille;
             X = x;
             Y = y;
-            _nbVoitures += 1;
-            Id = _nbVoitures;
+            
         }
 
         //methode qui sera un deplacement horizontal ou vertical selon la classe fille
